@@ -1,50 +1,38 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Docker
 
-Currently, two official plugins are available:
+docker-compose up --build
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## License : MIT
 
-## Expanding the ESLint configuration
+## Contribution Guidelines
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Merci de votre intérêt pour contribuer à ce projet ! Voici quelques étapes pour vous aider à démarrer :
 
-- Configure the top-level `parserOptions` property like this:
+1. **Fork le dépôt** : Cliquez sur le bouton "Fork" en haut de la page du dépôt pour créer une copie de ce dépôt sur votre compte GitHub.
+2. **Clone votre fork** : Clonez votre fork localement en utilisant la commande suivante :
+   ```sh
+   git clone https://github.com/votre-utilisateur/opensource_project.git
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Créer une branche** Créez une nouvelle branche pour votre fonctionnalité ou correction de bug :
+  ```sh
+  git checkout -b   ma-nouvelle-fonctionnalite
+  ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. **Faire des modifications** : Apportez vos modifications dans votre environnement de développement.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+5. **Commit vos changements** : Commitez vos modifications avec un message de commit clair et descriptif :
+  ```sh
+  git commit -m "Ajout de ma nouvelle fonctionnalité"
+  ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+6. **Pousser vers votre fork** : Poussez vos modifications vers votre fork sur GitHub :
+  ```sh
+  git push origin ma-nouvelle-fonctionnalite
+  ```
+
+7. **Ouvrir une Pull Request** : Allez sur la page du dépôt original et cliquez sur "New Pull Request" pour soumettre vos modifications pour révision.
+
+## Mise en prod
+
